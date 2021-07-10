@@ -24,7 +24,7 @@
 % \usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.8]{geometry}
+\usepackage[scale=0.85]{geometry}
 \usepackage{multicol}
 %\setlength{\hintscolumnwidth}{3cm}                 % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
@@ -77,7 +77,7 @@
   \par\addvspace{#1}}
 
 \newcommand*{\customcvproject}[4][.25em]{
-%   \vfill\noindent
+  \vfill\noindent
   \begin{tabular}{@{}l} 
     {\bfseries #2}
   \end{tabular}
@@ -90,7 +90,8 @@
     \begin{minipage}{\maincolumnwidth}%
       \small#4%
     \end{minipage}}\fi%
-  \par\addvspace{#1}}
+  \par\addvspace{#1}
+  }
 
 \setlength{\tabcolsep}{12pt}
 
@@ -100,6 +101,12 @@
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
+
+
+%/////////////////////////////////////////////////////////////////////////////////////////
+%////////////////////////////////////////HEADER////////////////////////////////////////////
+%//////////////////////////////////////////////////////////////////////////////////////////
+
 \makecvtitle
 \vspace*{-14mm}
 
@@ -109,8 +116,47 @@
 \end{tabular}
 \end{center}
 
+%//////////////////////////////////////////////////////////////////////////////////////////
+%//////////////////////////////////////END HEADER//////////////////////////////////////////
+%//////////////////////////////////////////////////////////////////////////////////////////
+
+
+%//////////////////////////////////////////////////////////////////////////////////////////
+%////////////////////////////////////////SKILLS////////////////////////////////////////////
+%//////////////////////////////////////////////////////////////////////////////////////////
+
+\section{SKILLS}
+\begin{minipage}{\maincolumnwidth}%
+	\small{
+    	\begin{itemize}
+        \item \textbf{Degree Focus Areas:} Embedded and Hosted Software Development, Mixed Signal Electronics, CAD Modelling for 3D Printing, PCB Design, HDL Design and FPGAs, Classical and Modern Control Theory IC Design. 
+        \item \textbf{Language Proficiencies:} C/C++, Python, MATLAB, SystemVerilog, HTML/CSS/JavaScript.  
+        \item \textbf{Environments/Frameworks:} Linux/Unix, Qt/PyQt, MicroPython, LAMP Stack Web Dev.
+		\end{itemize}}%
+\end{minipage}
+      
+}
+
+%//////////////////////////////////////////////////////////////////////////////////////////
+%/////////////////////////////////////END SKILLS///////////////////////////////////////////
+%//////////////////////////////////////////////////////////////////////////////////////////
+
+
+%//////////////////////////////////////////////////////////////////////////////////////////
+%//////////////////////////////////////EDUCATION///////////////////////////////////////////
+%//////////////////////////////////////////////////////////////////////////////////////////
+
 \section{EDUCATION}
-{\customcventry{July 2021}{MEng Electronics with Computer Systems: Expected 1st Class Hons}{University of Southampton}{Southampton, UK}{}{}}
+{\customcventry{July 2021}{MEng Electronics with Computer Systems: 1st Class Honors}{University of Southampton}{Southampton, UK}{}{}}
+
+%//////////////////////////////////////////////////////////////////////////////////////////
+%////////////////////////////////////END EDUCATION/////////////////////////////////////////
+%//////////////////////////////////////////////////////////////////////////////////////////
+
+
+%//////////////////////////////////////////////////////////////////////////////////////////
+%///////////////////////////////////////EXPERIENCE/////////////////////////////////////////
+%//////////////////////////////////////////////////////////////////////////////////////////
 
 \section{EXPERIENCE}
 
@@ -121,52 +167,66 @@
     %         Currently in use surveying the Amazon River basin. 
     % \item Developed cross-platform Python CLI tool to convert ITER Systems data to format useed by Australian geographic data. 
     \item Completed smaller hardware/software projects so full-time employees could focus on long-term projects.
-    \item Developed cross-compilation workflow (Windows 10 to embedded Linux) for existing software suite based on Qt Framework.
+    \item Developed cross-compilation workflow (Windows 10 to embedded Linux) for an existing Qt-based software suite.
     \item Tested GSM hardware for use with Raspberry Pi (and similar) systems.   
-    \item Developed next-generation software for autonomous boat position tracking and bathymetric data presentation (discussed below).
+    \item Developed next-generation software for autonomous boat position tracking and bathymetric data presentation.
     \item Full reference available on request.
 \end{itemize}
 }
 
-\section{PROJECTS}
+%//////////////////////////////////////////////////////////////////////////////////////////
+%////////////////////////////////////END EXPERIENCE////////////////////////////////////////
+%//////////////////////////////////////////////////////////////////////////////////////////
 
+
+%//////////////////////////////////////////////////////////////////////////////////////////
+%////////////////////////////////////NOTABLE PROJECTS//////////////////////////////////////
+%//////////////////////////////////////////////////////////////////////////////////////////
+
+\section{NOTABLE PROJECTS}
+\vspace*{-8mm}
 {\customcvproject{Accelerating ML performance on an open-source RISC-V Core}{Sept 2020 - Feb 2021}{University - 4th Year Group Project}
   {\begin{itemize}
+    \item Worked with a group of six as Hardware Benchmarking Lead.
     \item Added part of the RISC-V Vector Extension (RVV) to existing open-source RiSC-V core.
     \item Ported Tensorflow Lite for Microcontrollers (TFLM) and the TinyMLPerf benchmark to the processor.
     \item Liaised with the TFLM team at Google to integrate RVV instructions into TFLM. 
-    \item Presented work at British Computer Society event \url{https://youtu.be/t0Fpy4TzLUE}
-    \item Lead the open-sourcing of the group's work at \url{https://github.com/AI-Vector-Accelerator}
-  \end{itemize}
+  \end{itemize} 
   }
 }
 
 {\customcvproject{QGIS (Open-source Geographic Information System) Plugin}{Feb 2016 – May 2017}{ITER Systems}
-{\begin{itemize}
-    \item Developed Python plugin for open-source software to integrate with ITER software suite.
-    \item Displays real-time position, heading, user-generated survey lines, helmsman display computed from data transmitted over UDP from aquatic vehicles or other ITER software.
-    \item Currently in use by customers surveying the Amazon river basin.
-\end{itemize}
+  {\begin{itemize}
+      \item Developed Python plugin for open-source software to integrate with ITER software suite.
+      \item Displays real-time position, heading, user-generated survey lines, helmsman display computed from data transmitted over UDP from aquatic vehicles or other ITER software.
+      \item Currently in use by customers surveying the Amazon river basin.
+  \end{itemize}
+  }
 }
 
-{\customcvproject{Low-cost robotic platform for Python coding education}{Sept 2019 - June 2020}
-{\begin{itemize}
-\end{itemize}
-}
+{\customcvproject{Low-cost robotic platform for Python coding education}{Sept 2019 - June 2020}{University - 3rd Year Disertation Project}
+  {\begin{itemize}
+      \item Designed and fabricated PCB, 3D-printed chassis, for small, low-cost robotic platform.
+      \item Developed Python API for robust, intuitive control of motors, RGBLEDs, piezob buzzer, ultrasound distance sensor over bluetooth. 
+      \item Prototype efficacy confirmed in testing with novice programmers.
+  \end{itemize}
+  }
 }
 
-\section{ADDITIONAL}
-\begin{minipage}{\maincolumnwidth}%
-	\small{
-    	\begin{itemize}
-          \item Relevant Coursework: Data Structures and Algorithms, Natural Language Processing, Computer Systems, Databases, Computer Security, Abstract Algebra
-          \item President of XYZ Club, Public Relations Manager of Swarthmore QWE Club
-          \item Programming Languages: Python, C, C++, PHP, Java, HTML/CSS, Javascript, jQuery, NodeJS
-          \item Fluent in Gibberish, conversational in Nonsense
-		\end{itemize}}%
-\end{minipage}%
-      
+{\customcvproject{Uni Light Opera Society Musical Director}{Oct 2019 - Feb 2021}
+  {\begin{itemize}
+    \item Led ~25 singers and 12 orchestra to produce a successful operatic stage production.
+    \item Managed performer disagreements, orchestra and cast recruitment, planning and running weekly rehearsals.  
+    \item Liaised with show directors to manage rehearsal time and guide the direction for the overall project.
+  \end{itemize}
+  }
 }
+
+
+%//////////////////////////////////////////////////////////////////////////////////////////
+%//////////////////////////////////END NOTABLE PROJECTS ///////////////////////////////////
+%//////////////////////////////////////////////////////////////////////////////////////////
+
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
 %  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
